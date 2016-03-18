@@ -102,7 +102,16 @@ img {
 
 /* ---- content styles ----- */
 .container {
-  height: 90vh; }
+  height: 90vh;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex-direction: column;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-justify-content: center;
+      -ms-flex-pack: center;
+          justify-content: center; }
 
 .header-scroll {
   transition: height 1s ease 1s; }
@@ -123,53 +132,35 @@ header {
   padding: 2.5rem; }
   @media all and (min-width: 600px) {
     header {
-      display: -webkit-flex;
-      display: -ms-flexbox;
-      display: flex;
-      -webkit-flex-direction: column;
-          -ms-flex-direction: column;
-              flex-direction: column;
-      -webkit-align-items: center;
-          -ms-flex-align: center;
-              align-items: center;
-      -webkit-justify-content: center;
-          -ms-flex-pack: center;
-              justify-content: center;
       padding: 1.5rem; } }
   @media all and (min-width: 1000px) {
     header {
-      display: -webkit-flex;
-      display: -ms-flexbox;
-      display: flex;
       -webkit-flex-direction: row;
           -ms-flex-direction: row;
               flex-direction: row;
       -webkit-align-items: flex-start;
           -ms-flex-align: start;
+                  -ms-grid-row-align: flex-start;
               align-items: flex-start;
       -webkit-justify-content: flex-start;
           -ms-flex-pack: start;
               justify-content: flex-start;
       margin-left: 0rem; } }
 
-.search-area {
-  -webkit-align-self: center;
-      -ms-flex-item-align: center;
-          align-self: center; }
-  @media all and (min-width: 600px) {
-    .search-area {
-      display: -webkit-flex;
-      display: -ms-flexbox;
-      display: flex;
-      -webkit-flex-direction: row;
-          -ms-flex-direction: row;
-              flex-direction: row;
-      -webkit-align-items: center;
-          -ms-flex-align: center;
-              align-items: center;
-      -webkit-justify-content: center;
-          -ms-flex-pack: center;
-              justify-content: center; } }
+@media all and (min-width: 600px) {
+  .search-area {
+    display: -webkit-flex;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-flex-direction: row;
+        -ms-flex-direction: row;
+            flex-direction: row;
+    -webkit-align-items: center;
+        -ms-flex-align: center;
+            align-items: center;
+    -webkit-justify-content: center;
+        -ms-flex-pack: center;
+            justify-content: center; } }
 
 .logo {
   margin-bottom: 1rem; }
@@ -178,17 +169,12 @@ header {
       margin-bottom: 0; } }
   @media all and (min-width: 1000px) {
     .logo {
-      margin-bottom: 0;
       -webkit-align-self: center;
           -ms-flex-item-align: center;
               align-self: center; } }
   .logo img {
     width: 300px; }
     @media all and (min-width: 600px) {
-      .logo img {
-        width: 280px;
-        padding-right: 1.5rem; } }
-    @media all and (min-width: 1000px) {
       .logo img {
         width: 280px;
         padding-right: 1.5rem; } }
@@ -202,8 +188,6 @@ header {
       margin-bottom: 0.25rem; } }
   @media all and (min-width: 1000px) {
     .search {
-      width: 20rem;
-      margin-bottom: 0.25rem;
       -webkit-align-self: center;
           -ms-flex-item-align: center;
               align-self: center; } }
@@ -250,12 +234,22 @@ button {
   margin-right: -1.25rem;
   z-index: 100; }
 
+.loader-wrapper {
+  width: 55%;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-justify-content: center;
+      -ms-flex-pack: center;
+          justify-content: center; }
+
 .loader {
   background: url("../../images/ajax-loader.gif") no-repeat;
   background-size: cover, cover;
-  width: 5rem;
-  height: 5rem;
-  margin: 1rem auto 0; }
+  width: 3rem;
+  height: 3rem;
+  margin: 2rem auto 0;
+  display: none; }
 
 /* --------------------- photo grid ------------------------- */
 .photos {
@@ -317,10 +311,7 @@ button {
           align-content: flex-start; }
   @media all and (min-width: 600px) {
     .profile-photo {
-      width: 50%;
-      -webkit-align-content: flex-start;
-          -ms-flex-line-pack: start;
-              align-content: flex-start; } }
+      width: 50%; } }
   .profile-photo img {
     border-radius: 50%;
     width: 40%; }
@@ -369,7 +360,6 @@ footer {
   @media all and (min-width: 1000px) {
     footer {
       text-align: left;
-      height: 10vh;
       margin-left: 2rem; } }
 
 .copyright {

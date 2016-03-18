@@ -2,6 +2,9 @@
 
 .container {
 	height: 90vh;
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
 }
 
 .header-scroll {
@@ -16,15 +19,10 @@ header {
 	padding: 2.5rem;
 
 	@include tablet-large {
-		display: flex;
-		flex-direction: column;
-		align-items: center;
-		justify-content: center;
 		padding: 1.5rem;
 	}
 
 	@include desktop {
-		display: flex;
 		flex-direction: row;
 		align-items: flex-start;
 		justify-content: flex-start;
@@ -33,7 +31,7 @@ header {
 }
 
 .search-area {
-	align-self: center;
+	// align-self: center;
 
 	@include tablet-large {
 		display: flex;
@@ -51,7 +49,6 @@ header {
 	}
 
 	@include desktop {
-		margin-bottom: 0;
 		align-self: center;
 	}
 
@@ -59,11 +56,6 @@ header {
 		width: 300px;
 
 		@include tablet-large {
-			width: 280px;
-			padding-right: 1.5rem;
-		}
-
-		@include desktop {
 			width: 280px;
 			padding-right: 1.5rem;
 		}
@@ -80,8 +72,6 @@ header {
 	}
 
 	@include desktop {
-		width: 20rem;
-		margin-bottom: 0.25rem;
 		align-self: center;
 	}
 }
@@ -130,12 +120,19 @@ button {
 	z-index: 100;
 }
 
+.loader-wrapper {
+	width: 55%;
+	display: flex;
+	justify-content: center;
+}
+
 .loader {
 	background: url('../../images/ajax-loader.gif') no-repeat;
 	background-size: cover, cover;
-	width: 5rem;
-	height: 5rem;
-	margin: 1rem auto 0;
+	width: 3rem;
+	height: 3rem;
+	margin: 2rem auto 0;
+	display: none;
 }
 
 /* --------------------- photo grid ------------------------- */
@@ -193,7 +190,6 @@ button {
 
 	@include tablet-large {
 		width: 50%;
-		align-content: flex-start;
 	}
 
 	img {
@@ -247,7 +243,6 @@ footer {
 
 	@include desktop {
 		text-align: left;
-		height: 10vh;
 		margin-left: 2rem;
 	}
 }
