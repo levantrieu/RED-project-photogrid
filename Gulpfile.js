@@ -46,4 +46,5 @@ gulp.task('watch', function(){
   gulp.watch(['./build/instagrid.js', 'index.html', './scss/style.scss']).on('change', browserSync.reload);
 });
 
+
 gulp.task('default', ['sass', 'uglify', 'watch']);
