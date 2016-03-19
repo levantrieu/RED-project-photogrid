@@ -10,16 +10,12 @@ $(function () {
     event.preventDefault();
     $loader.css('display', 'block');
 
-    // $loadMore.hide();
-
     var hashtag = $('#hashtag').val();
 
     // animate photo grid scrolling
-
     $('.container').css('height', '8rem').addClass('header-scroll');
 
     // get photos from API
-
     $.ajax({
       dataType: 'jsonp',
       method: 'GET',
@@ -39,8 +35,7 @@ $(function () {
 
       $photos.empty().append(instaPhotos);
       instaPhotos = '';
-      $loadMore.show();
-
+      $loadMore.css('display', 'block');
 
     })
 
@@ -52,12 +47,11 @@ $(function () {
   });
 
   // Load more photos
-
   $('.load-more').on('click', function () {
-
-
+    event.preventDefault();
+    $loader.css('display', 'block');
+    
     // get photos from API
-
     $.ajax({
       dataType: 'jsonp',
       method: 'GET',
@@ -76,8 +70,6 @@ $(function () {
 
       $photos.append(instaPhotos);
       instaPhotos = '';
-
-
     })
 
     .fail(function (instaData) {

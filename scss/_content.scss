@@ -1,7 +1,7 @@
 /* ---- content styles ----- */
 
 .container {
-	height: 90vh;
+	height: 85vh;
 	display: flex;
 	flex-direction: column;
 	justify-content: center;
@@ -235,11 +235,31 @@ button {
 	margin-bottom: 2rem;
 }
 
+.button-wrapper {
+	display: flex;
+	justify-content: center;
+
+	.load-more {
+			color: #fff;
+			background-color: #BB2020;
+			border-radius: 0.25rem;
+			width: 8rem;
+			height: 3rem;
+			margin: 0;
+			display: none;
+
+			&:hover {
+				filter: brightness(2);
+			}
+	}
+}
+
 /* --------------------- footer ------------------------- */
 
 footer {
 	text-align: center;
 	height: 10vh;
+	margin: 2rem 0 0;
 
 	@include desktop {
 		text-align: left;

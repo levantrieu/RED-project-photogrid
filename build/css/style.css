@@ -102,7 +102,7 @@ img {
 
 /* ---- content styles ----- */
 .container {
-  height: 90vh;
+  height: 85vh;
   display: -webkit-flex;
   display: -ms-flexbox;
   display: flex;
@@ -353,10 +353,30 @@ button {
   text-align: center;
   margin-bottom: 2rem; }
 
+.button-wrapper {
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-justify-content: center;
+      -ms-flex-pack: center;
+          justify-content: center; }
+  .button-wrapper .load-more {
+    color: #fff;
+    background-color: #BB2020;
+    border-radius: 0.25rem;
+    width: 8rem;
+    height: 3rem;
+    margin: 0;
+    display: none; }
+    .button-wrapper .load-more:hover {
+      -webkit-filter: brightness(2);
+              filter: brightness(2); }
+
 /* --------------------- footer ------------------------- */
 footer {
   text-align: center;
-  height: 10vh; }
+  height: 10vh;
+  margin: 2rem 0 0; }
   @media all and (min-width: 1000px) {
     footer {
       text-align: left;
