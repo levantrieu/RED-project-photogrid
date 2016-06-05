@@ -1,6 +1,7 @@
 # Photo Grid Project
 
 Please view the site deployed site on [GitHub Pages.](http://levantrieu.github.io/RED-project-photogrid/)
+*Note: Instagram has updated access permission to the API and this use case is no longer supported. Please visit [www.levantrieu.com] (http://levantrieu.com/photo-search-site-using-an-api/) to see screenshots of the app.*
 
 **Project Brief**
 
